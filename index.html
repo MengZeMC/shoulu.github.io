@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>梦泽收录系统官网</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0-beta2/css/all.min.css">
+  <style>
+    .navbar-brand .fas {
+      margin-right: 5px;
+    }
+
+    footer {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 导航栏 -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="fas fa-globe"></i>梦泽收录系统</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">首页</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">关于我们</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">联系方式</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 主要内容 -->
+  <main>
+    <div class="container">
+      <h1>欢迎来到梦泽收录系统官网</h1>
+      <p>该网站收录系统源码使用PHP、CSS、SQL、HTML等语言进行开发，完全遵守Zemeng Open Source Protocol License (ZOSPL) Version 1.0</p>
+      <h2>安装和使用</h2>
+      <p>1. 通过官网下载该系统源代码<br />
+        2. 将代码上传到您的Web服务器上。<br />
+        3. 在数据库中创建一个新的数据库，并将<code><b>create_table.sql</code></b>文件导入该数据库中。<br />
+        4. 修改<code><b>config.php</b></code>文件以配置您的数据库连接信息。<br />
+        5. 在浏览器中打开网站地址，即可使用。<br />
+        6. 后台地址为：<code>域名/cnm.php。</code><br />
+        <b><code><h4>如果发现任何bug或者不兼容，请立即通过以下联系方式报告给我！谢谢您的参与！</h4></code></b>
+      <p>如果您有任何疑问或合作意向，请通过以下方式联系我们：</p>
+      <ul class="list-unstyled">
+        <li><i class="fas fa-envelope"></i> Email: MengZe2@mengze2.top</li>
+        <li><i class="fab fa-weixin"></i> 微信: MengZeMC_Minecraft</li>
+        <li><i class="fab fa-qq"></i> QQ: 2317113278</li>
+      </ul>
+      <a class="btn btn-primary" href="https://1drv.ms/u/s!ArZFFCkF7-32gQ2kCtaKvziNiB6L" download>微软网盘下载</a>
+      <a class="btn btn-primary" href="https://drive.google.com/file/d/1-A5TPmwOnZl7Be0BBA-LPYtzXn8752F7/view?usp=drivesdk" download>谷歌网盘下载</a>
+      <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+  </main>
+
+  <footer class="bg-light text-center py-4">
+    <div class="container">
+      &copy; 2023 网站收录系统. All rights reserved.
+      <br>
+      本网站采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a> 和 <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank">GPL 3.0</a> 协议进行许可。
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+  <script>
+    const labels = ['PHP', 'CSS', 'SQL', 'HTML', '其他'];
+    const data = [45, 17, 23, 15, 10];
+
+    const ctx = document.getElementById('myChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: labels,
+        datasets: [{
+          data: data,
+          backgroundColor: ['#007bff', '#28a745', '#17a2b8', '#ffc107', '#dc3545']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'bottom'
+          },
+          title: {
+            display: true,
+            text: '源码分布情况'
+          }
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
